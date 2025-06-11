@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SENTA VISHANT| Web Developer Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #f4f4f4 60%, #e0f7fa 100%);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(90deg, #111 70%, #00bcd4 100%);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      animation: headerFadeIn 1.5s ease;
+    }
+    @keyframes headerFadeIn {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-top: 1rem;
+      box-shadow: 0 4px 16px rgba(0,188,212,0.2);
+      transition: transform 0.3s;
+    }
+    header img:hover {
+      transform: scale(1.08) rotate(-2deg);
+    }
+    nav {
+      background: #222;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.2s, border-bottom 0.2s;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover {
+      color: #00bcd4;
+      border-bottom: 2px solid #00bcd4;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s, transform 0.8s;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0 2rem 0;
+    }
+    .skill {
+      background: #e0f7fa;
+      color: #00796b;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 1rem;
+      box-shadow: 0 1px 4px rgba(0,188,212,0.08);
+    }
+    .projects {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+    .project-card {
+      background: white;
+      padding: 1.5rem 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(0,188,212,0.15);
+    }
+    .project-card h3 {
+      margin-top: 0;
+      color: #00bcd4;
+    }
+    .project-tech {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+    .project-links a {
+      color: #00bcd4;
+      text-decoration: none;
+      margin-right: 1rem;
+      font-size: 0.95rem;
+      transition: text-decoration 0.2s;
+    }
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+    .project-img {
+      width: 100%;
+      max-height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      box-shadow: 0 1px 6px rgba(0,188,212,0.08);
+    }
+    form {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,188,212,0.08);
+      max-width: 400px;
+      margin: 1.5rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    form input, form textarea {
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    form button {
+      background: #00bcd4;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    form button:hover {
+      background: #0097a7;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #aaa;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="home">
+    <div class="header-intro" style="font-size:1.2rem; font-weight:500; margin-bottom:0.7rem; letter-spacing:1px;">Web Developer | UI/UX Enthusiast | Lifelong Learner</div>
+    <h1 class="header-title">Hi, I'm SENTA VISHANT</h1>
+    <p class="header-sub">Creative Web Developer | Frontend Specialist | Tech Enthusiast</p>
+    <img src="C:/vishant11/1000145373-01.jpeg" alt="Your Photo" />
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate web developer with expertise in HTML, CSS, JavaScript, React, and responsive design.<br>
+      I love building user-friendly interfaces and turning creative ideas into functional applications.<br>
+      <b>Interests:</b> UI/UX, open-source, hackathons, and learning new tech.<br>
+      <b>Bio:</b> I thrive on challenges and enjoy collaborating with creative teams to deliver impactful digital experiences.
+    </p>
+    <h3>Skills</h3>
+    <div class="skills">
+      <span class="skill">HTML5</span>
+      <span class="skill">CSS3</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">React</span>
+      <span class="skill">Redux</span>
+      <span class="skill">Git</span>
+      <span class="skill">Responsive Design</span>
+      <span class="skill">APIs</span>
+      <span class="skill">Figma</span>
+    </div>
+    <h3>Education</h3>
+    <ul>
+      <li>B.Tech in Computer Science – KSV University</li>
+      <li>Frontend Development Certification – FreeCodeCamp</li>
+    </ul>
+    <h3>Professional Experience</h3>
+    <ul>
+      <li>Frontend Intern at LDRP ITR (2022 – 2026)</li>
+      <li>Freelance Developer for multiple startups (2026 – Present)</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img class="project-img" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Portfolio Website" />
+        <h3>Portfolio Website</h3>
+        <div class="project-tech">HTML, CSS, JavaScript</div>
+        <p>A clean, responsive personal portfolio built with HTML, CSS, and JavaScript. Features smooth scrolling, section reveals, and a modern UI.</p>
+        <div class="project-links">
+          <a href="#" target="_blank">Live Demo</a>
+          <a href="#" target="_blank">Source Code</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img class="project-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Weather App" />
+        <h3>Weather App</h3>
+        <div class="project-tech">JavaScript, OpenWeather API</div>
+        <p>Real-time weather information using OpenWeather API and async JavaScript. Includes location search, weather icons, and responsive design.</p>
+        <div class="project-links">
+          <a href="#" target="_blank">Live Demo</a>
+          <a href="#" target="_blank">Source Code</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img class="project-img" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Crypto Tracker" />
+        <h3>Crypto Tracker</h3>
+        <div class="project-tech">React, Redux Toolkit</div>
+        <p>A React + Redux Toolkit app that simulates live crypto prices with sleek UI, charts, and dark mode support.</p>
+        <div class="project-links">
+          <a href="#" target="_blank">Live Demo</a>
+          <a href="#" target="_blank">Source Code</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:sentavishant5655@gmail.com">vishant5655@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/sentavishant" target="_blank">sentavishant</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/sentavishant" target="_blank">sentavishant</a></p>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 SENTA VISHANT. All rights reserved.
+  </footer>
+
+  <script>
+    // Section reveal on scroll
+    const sections = document.querySelectorAll('section');
+    const revealSection = () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < trigger) {
+          section.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealSection);
+    window.addEventListener('load', revealSection);
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Vanta.js 3D animated background for header
+    window.addEventListener('DOMContentLoaded', function() {
+      if (window.VANTA) {
+        VANTA.NET({
+          el: "#home",
+          mouseControls: true,
+          touchControls: true,
+          minHeight: 400.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x00bcd4,
+          backgroundColor: 0x111111,
+          points: 12.0,
+          maxDistance: 22.0,
+          spacing: 18.0
+        });
+      }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+</body>
+</html>
